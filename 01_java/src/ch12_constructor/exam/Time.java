@@ -1,6 +1,6 @@
 package ch12_constructor.exam;
 
-public class Time {
+public class Time {//Quiz04
 	// 시간, 분, 초 의 값을 저장하는 멤버변수 선언
 	private int hour;     // 0 - 23
 	private int minute;   // 0 - 59

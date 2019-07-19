@@ -8,12 +8,12 @@ public class IntArrayStack {//Test05
 	int top = -1;
 	int [] elements = new int[CAPACITY];
 	
-	public boolean empty() {
-		return (top == -1);
-	}
-	
 	public boolean full() {
 		return (top == CAPACITY - 1);
+	}
+	
+	public boolean empty() {
+		return (top == -1);
 	}
 	
 	public void push(int item) {
@@ -29,7 +29,7 @@ public class IntArrayStack {//Test05
 		elements[top--] = 0;
 		return item;
 	}
-	
+	//Override 기존의 것이 public이여서 똑같이 사용
 	public String toString() {
 		return "Stack" + Arrays.toString(elements);
 	}

@@ -1,6 +1,6 @@
 package ch12_constructor.exam;
 
-public class Dog {
+public class Dog {//Quiz01
 	private String name;
 	private int age;
 	 Dog() {

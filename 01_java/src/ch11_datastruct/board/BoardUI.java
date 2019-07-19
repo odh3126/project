@@ -11,6 +11,38 @@ public class BoardUI {
 	// 로그인 사용자 아이디
 	String loginId = "hong";
 	
+	void service() {
+		System.out.println("-----------------");
+		System.out.println("자바로 구현하는 게시판 프로젝트");
+		System.out.println("-----------------");
+		while (true) {
+			switch (menu()) {
+			case 1: select(); break;
+			case 2: selectOne(); break;
+			case 3: write(); break;
+			case 4: modify(); break;
+			case 5: delete(); break;
+			case 0: exit();
+			default:
+				System.out.println("잘못된 메뉴번호 입니다.");
+				System.out.println("다시 선택해 주세요.");
+			}
+		}		
+	}
+	
+	int menu() {
+		System.out.println("-----------------");
+		System.out.println("1. 전체 조회");
+		System.out.println("2. 글번호 조회");
+		System.out.println("3. 글등록");
+		System.out.println("4. 글수정");
+		System.out.println("5. 글삭제");
+		System.out.println("0. 종료");
+		System.out.println("-----------------");
+		System.out.print("메뉴 중 처리할 항목을 선택하세요 : ");
+		return Integer.parseInt(sc.nextLine());	
+	}
+	
 	void select() {
 		// 화면에 출력할 전체 게시물..
 		// dao에게 전체게시물 목록을 요청한다.
@@ -106,35 +138,5 @@ public class BoardUI {
 		System.exit(0);
 	}
 	
-	int menu() {
-		System.out.println("-----------------");
-		System.out.println("1. 전체 조회");
-		System.out.println("2. 글번호 조회");
-		System.out.println("3. 글등록");
-		System.out.println("4. 글수정");
-		System.out.println("5. 글삭제");
-		System.out.println("0. 종료");
-		System.out.println("-----------------");
-		System.out.print("메뉴 중 처리할 항목을 선택하세요 : ");
-		return Integer.parseInt(sc.nextLine());	
-	}
 	
-	void service() {
-		System.out.println("-----------------");
-		System.out.println("자바로 구현하는 게시판 프로젝트");
-		System.out.println("-----------------");
-		while (true) {
-			switch (menu()) {
-			case 1: select(); break;
-			case 2: selectOne(); break;
-			case 3: write(); break;
-			case 4: modify(); break;
-			case 5: delete(); break;
-			case 0: exit();
-			default:
-				System.out.println("잘못된 메뉴번호 입니다.");
-				System.out.println("다시 선택해 주세요.");
-			}
-		}		
-	}
 }

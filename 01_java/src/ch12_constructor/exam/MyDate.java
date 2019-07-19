@@ -1,6 +1,6 @@
 package ch12_constructor.exam;
 
-public class MyDate {
+public class MyDate {//Quiz03
 
 	private int year;
 	private int month;

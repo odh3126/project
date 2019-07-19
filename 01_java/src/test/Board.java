@@ -1,7 +1,7 @@
-package ch11_datastruct.board;
+package test;
 
 public class Board {
-	private int no;
+	int no;
 	private String writer;
 	private String title;
 	private String content;
@@ -13,10 +13,10 @@ public class Board {
 	public void setNo(int no) {
 		this.no = no;
 	}
-	public String getWriter() {
+	public String getwriter() {
 		return writer;
 	}
-	public void setWriter(String writer) {
+	public void setwriter(String writer) {
 		this.writer = writer;
 	}
 	public String getTitle() {
@@ -37,4 +37,6 @@ public class Board {
 	public void setRegDate(String regDate) {
 		this.regDate = regDate;
 	}
+	
+	
 }
