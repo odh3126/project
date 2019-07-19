@@ -6,6 +6,17 @@ public class Test03 {
 	Scanner sc = new Scanner(System.in);
 	IntArrayQueue queue = new IntArrayQueue();
 	
+	void service() {
+		while (true) {
+			switch (menu()) {
+			case 1: add(); break;
+			case 2: del(); break;
+			case 3:	showQueue(); break;
+			case 0: exit();
+			}
+		}
+	}
+	
 	int menu() {
 		System.out.println("------------------");
 		System.out.println("1. 입력");
@@ -39,17 +50,13 @@ public class Test03 {
 		System.out.println(queue.toString());
 	}
 	
-	void service() {
-		while (true) {
-			switch (menu()) {
-			case 1: add(); break;
-			case 2: del(); break;
-			case 3:	showQueue(); break;
-			case 0: return;
-			}
-		}
+	void exit() {
+		sc.close();
+		// 프로세스 종료
+		System.out.println("게시판 시스템을 종료합니다.");
+		System.exit(0);
 	}
-
+	
 	public static void main(String[] args) {
 		/*
 		Test02 t = new Test02();

@@ -13,7 +13,7 @@ public class IntArrayQueue {//Test03
 	
 	void add(int val) {
 		if ( full() ) {
-			System.out.println("비어있는 공간이 없습니다.\n");
+			System.out.println("비어있는 공간이 없습니다.");
 			return;
 		}
 		tail = (tail + 1) % CAPACITY;
@@ -30,7 +30,7 @@ public class IntArrayQueue {//Test03
 	 */
 	int peek() {
 		if (size == 0) {
-			System.out.println("입력된 데이터가 없습니다.\n");
+			System.out.println("입력된 데이터가 없습니다.");
 			return -1;
 		}
 		return queue[head];
