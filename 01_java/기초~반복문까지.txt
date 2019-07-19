@@ -1,0 +1,151 @@
+[문제1] 클래스 위쪽에 선언이 가능한 것을 모두 고르시오? 1, 2, 3
+1) 주석문   2) 패키지   3) 임포트   4) 메서드   5) 변수
+
+
+[문제2] .class 파일은 bytecode로 되어 있습니다. bytecode를 실행하는 것은? 
+
+답 : JVM
+
+
+[문제3] 다음 중 문자열 상수가 아닌 것은? 4 
+1) \n     2) \r     3) \t     4) \l
+
+
+[문제4] 변수와 클래스의 네이밍 룰에 대해서 설명하시오 
+
+답 : 첫글자를 소문자로 이어지는 단어의 첫글자는 대문자로
+
+
+[문제5] String data = keyboard.nextInt(); 이 코드는 에러가 발생합니다. 이유를 적으시오.
+
+답 : 
+
+
+[문제6] printf에 사용되는 format 문자입니다. 아래의 코드를 설명하시오
+
+%10d
+
+답 : 정수값이 대입되어야 하고 정수를 출력하기 위해 최소 10자리를 확보한다. 숫자는 오른쪽에 출력되는 남은 칸은 빈칸으로 출력됨
+
+
+[문제7] 변수를 상수로 만들때 사용하는 키워드를 적으시오
+
+답 : final
+
+   
+[문제8] 11 ~ 19 사이의 숫자를 뽑아서 num 변수에 담는 코드를 작성하시오
+
+Random r = new Random();
+int num = [코드];
+
+코드 : r.nextInt(9) + 11
+
+
+[문제9] num1과 num2의 값을 바꾸는 코드를 작성하시오
+
+System.out.println("수를 입력 : "); 
+int num1 = sc.nextInt();
+System.out.println("수를 입력 : "); 
+int num2 = sc.nextInt();
+[코드]
+
+
+코드 : 
+int temp = num1;
+num1 = num2;
+num2 = temp;
+
+
+[문제10] 생성된 두 난수 중에서 큰수를 화면에 출력하도록 삼항연산자를 이용해서 코드를 작성하시오
+
+Random r = new Random();
+int num1 = r.nextInt(10) + 1;
+int num2 = r.nextInt(10) + 1;
+System.out.printf(
+		"생성된 수(%d, %d) 중에서 큰수는 %d입니다."
+		, num1
+		, num2
+		, [코드]
+);
+		
+코드 : num1 > num2 ? num1 : num2
+		
+
+[문제11] 아래 코드의 실행 결과를 적으시오
+
+int a = 5;
+System.out.println(++a);  // 6
+System.out.println(a--);  // 6
+System.out.println(a);    // 5
+System.out.println(a++);  // 5
+System.out.println(--a);  // 5
+
+결과 : 6, 6, 5, 5, 5
+
+
+[문제12] 입력된 수의 절대값을 구하는 코드 입니다. 코드를 완성하시오
+
+Scanner sc = new Scanner(System.in);
+System.out.print("숫자를 입력하세요 : ");
+int inputNum = sc.nextInt();
+int absNum = inputNum;
+[코드]
+System.out.printf("%d의 절대 값 : %d", inputNum, absNum);
+
+코드 : 
+if (inputNum < 0) absNum = -inputNum;
+if (inputNum < 0) absNum = inputNum * -1;
+
+
+[문제13] 3개의 숫자를 입력 받고 그 중에서 최대값을 출력하는 프로그램입니다. 코드를 완성하시오
+
+Scanner sc = new Scanner(System.in);
+System.out.print("첫번째 숫자를 입력하세요 : ");
+int num1 = Integer.parseInt(sc.nextLine());
+System.out.print("두번째 숫자를 입력하세요 : ");
+int num2 = Integer.parseInt(sc.nextLine());
+System.out.print("세번째 숫자를 입력하세요 : ");
+int num3 = Integer.parseInt(sc.nextLine());
+
+int max = num1;
+[코드]
+System.out.printf("최대값 : %d", max);
+
+코드 :
+if (max < num2) max = num2;
+if (max < num3) max = num3;
+
+
+[문제14] 하나의 수를 입력받은 다음 입력받은 수까지의 짝수, 홀수, 전체 합을 구하는 프로그램입니다. 코드를 완성하시오
+
+Scanner sc = new Scanner(System.in);
+System.out.print("수 입력 : ");
+int num = Integer.parseInt(sc.nextLine());
+int evenSum = 0, oddSum = 0;
+for (int i = 1; i <= num; i++) {
+	if (i % 2 == 0) {
+		evenSum += i;
+		[코드]
+	}
+	oddSum += i;
+}
+System.out.println("홀수 합 : " + oddSum);
+System.out.println("짝수 합 : " + evenSum);
+System.out.println("전체 합 : " + (oddSum + evenSum));
+
+코드 : continue;
+
+
+[문제15] 1 부터 100사이의 숫자 중에서 솟수를 출력하는 프로그램을 작성하시오.
+
+int nValues = 100; 
+Outer : 
+for (int i = 2; i <= nValues; i++) {
+	for (int j = 2; j < i; j++) {
+		if (i % j == 0) 
+			[코드] 
+	}
+	System.out.print(i + " ");
+}
+
+코드 : continue Outer;

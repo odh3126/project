@@ -1,0 +1,78 @@
+ch01_basic
+	
+	Test01.	Eclipse UI 와 main Method의 이해
+	Test02.	주석문의 종류와 사용법 이해 
+	Test03.	출력문 print() method와 println() method의 차이
+	Test04.	줄바꿈문자(\n)
+	Test05.	변수의 개념 이해
+	Test06.	변수를 사용하는 이유
+	Test07.	문자열과 변수값의 + 연산
+	Test08.	출력문 printf() method의 이해
+	Test09.	printf()의 출력방식 
+	Test10.	Class의 이해
+	Test11.	자바프로그램의 구성요소와 이름 규칙(camal case)
+	Test12.	import
+	Test13.	CONSTANT
+	Test14.	문자열 상수(이스케이프문자)
+
+	Quiz01. 	package	
+	Quiz02.	출력문 print() 와 println() 활용
+	Quiz03.	출력문 printf() 활용
+	Quiz04.	자바 프로그램의 구성요소와 이름 규칙(camal case)
+	Quiz05.	이스케이프 문자 활용
+
+ch02_basic
+
+	Test01.	JAVA API Random Class method
+	Tset02.	JAVA API Scanner Class method
+	Tset03.	JAVA API Scanner Class 여러 개의 입력 받기
+	Test04.	JAVA API Scanner Class 정수값입력 후 문자열 받기.
+	Test05.	JAVA API Scanner Class 정수값을 문자열로 받아 변환하기.
+	Test06.	Swap
+	Test07.	연산자 - 삼항연산자
+	Test08.	연산자 - 비교연산자, boolean
+	Test09.	연산자 - 산술연산자
+	Test10.	연산자 - 증감연산자
+	Test11.	연산자 - 증감연산자
+	Test12.	연산자 - 논리연산자
+	Test13.	연산자 - 배정연산자
+
+	Quiz01.	Random 활용
+	Quiz02.	Swap 활용
+	Quiz03.	삼항연산자 활용
+	Quiz04.	삼항연산자 활용2
+	Quiz05.	산술연산자 활용( % )
+	Quiz06.	산술연산자 활용( /, % ) 
+	Quiz07.	산술연산자 활용( * )
+	Quiz08.	산술연산자 활용( /, % )
+	Quiz09.	증감연산자 활용
+	Quiz10.	논리연산자 활용
+	Quiz11.	연산자 활용
+
+ch03_condition
+
+	Test01.	제어문(if)의 형태 
+	Test02.	제어문(else)
+	Test03.	제어문(else if)
+	Test04.	제어문(switch)
+
+
+	Quiz01.	if문 활용
+	Quiz02.	if문 활용2
+	Quiz03.	if문 활용(최대값, 최소값)
+	Quiz04.	if문 활용(중간값)
+	Quiz05.	switch활용
+	
+ch04_repetition
+	
+	Test01.	for의 형태(1)
+	Test02.	for의 형태(2)
+	Test03.	for의 형태(3)
+	Test04.	for의 형태(중첩)
+	Test05.	while의 형태
+	Test06.	break;
+	Test07.	break loopName;
+	Test08.	continue; continue loopName;
+		
+	Quiz01.	
+
