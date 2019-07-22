@@ -1,16 +1,16 @@
-package ch11_datastruct.board;
+package ch14_extend;
 
 
 import java.util.Arrays;
 
-public class BoardArrayList {
-	Board[] elements = new Board[4];
+public class Employee01ArrayList {
+	Employee01[] elements = new Employee01[4];
 	int pos = 0;
 	
 	public boolean isEmpty() {
 		return pos == 0;
 	}
-	public void add(int index, Board data) {
+	public void add(int index, Employee01 data) {
 		if (pos == elements.length) {
 			elements = Arrays.copyOf(elements, pos * 2);
 		}
@@ -21,11 +21,11 @@ public class BoardArrayList {
 		elements[index] = data;
 		pos++;
 	}
-	public void add(Board data) {
+	public void add(Employee01 data) {
 		add(pos, data);
 	}
 
-	public Board get(int index){
+	public Employee01 get(int index){
 		return elements[index];
 	}
 	
