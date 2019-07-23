@@ -4,9 +4,6 @@ public class Dog /* extends java.lang.Object*/{
 	private String name;
 	private int age;
 	
-	
-	
-	
 	public Dog() {}
 	public Dog(String name, int age) {
 		this.name = name;
