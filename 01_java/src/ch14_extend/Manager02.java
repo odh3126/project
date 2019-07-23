@@ -24,7 +24,7 @@ public class Manager02 extends Employee02{
 		
 		msg.append("\n관리하는 사원의 정보\n");
 		msg.append("----------------\n");
-		for (int i =0; i < mngList.size(); i++) {
+		for (int i = 0; i < mngList.size(); i++) {
 			Employee02 e = mngList.get(i);
 			msg.append(e.info() + "\n");
 		}

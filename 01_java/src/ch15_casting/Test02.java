@@ -18,7 +18,7 @@ public class Test02 {
 		
 		//묵시적 형변환
 		Object o = f;
-		Food food =f;
+		Food food = f;
 		//자식 = 부모(x)  직접 받을수 없다.
 //		Fruit f4 = food; 
 		
