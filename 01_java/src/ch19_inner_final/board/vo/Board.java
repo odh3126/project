@@ -6,7 +6,6 @@ public class Board {
 	private String title;
 	private String content;
 	private String regDate;
-	
 	public int getNo() {
 		return no;
 	}

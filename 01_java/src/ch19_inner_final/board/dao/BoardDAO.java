@@ -39,7 +39,7 @@ public class BoardDAO {
 				insertBoard(board);
 			}
 		} catch (Exception e) {
-			
+			// TODO: handle exception
 		}
 		
 	}
@@ -58,7 +58,6 @@ public class BoardDAO {
 		}
 		return null;
 	}
-	
 	public void insertBoard(Board board) {
 		// 게시물 번호
 		if (board.getNo() == 0) {

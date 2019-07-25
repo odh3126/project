@@ -3,13 +3,12 @@ package ch19_inner_final.board.ui;
 import ch19_inner_final.board.dao.BoardDAO;
 
 public class DeleteBoardUI extends BaseUI {
-	
 	private BoardDAO dao;
 	
 	public DeleteBoardUI(BoardDAO dao) {
 		this.dao = dao;
 	}
-	
+
 	public void service() {
 		int no = getInt("삭제할 글번호를 입력하세요 : ");
 		int result = dao.deleteBoard(no);
@@ -20,5 +19,4 @@ public class DeleteBoardUI extends BaseUI {
 		}
 		System.out.println("해당 게시물이 존재하지 않습니다.");
 	}
-
 }

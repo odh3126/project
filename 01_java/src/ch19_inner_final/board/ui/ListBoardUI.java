@@ -11,8 +11,8 @@ public class ListBoardUI extends BaseUI {
 	public ListBoardUI(BoardDAO dao) {
 		this.dao = dao;
 	}
-	
-	public void select() {
+
+	public void service() {
 		// 화면에 출력할 전체 게시물..
 		// dao에게 전체게시물 목록을 요청한다.
 		ObjectArrayList list = dao.selectBoard();
@@ -24,8 +24,14 @@ public class ListBoardUI extends BaseUI {
 		if (list.isEmpty()) {
 			System.out.println("게시물이 없습니다.");
 		}
-		//테스트 코드
-		
+		// 테스트 코드 
+		/*
+		Iterator ite = list.iterator();
+		while (ite.hasNext()) {
+			Board b = (Board)ite.next();
+			System.out.println(b.getNo() + "-" + b.getTitle());
+		}
+		*/
 		
 		for (int i = list.size() - 1 ; i >= 0; i--) {
 			Board b = (Board)list.get(i);
@@ -33,11 +39,4 @@ public class ListBoardUI extends BaseUI {
 		}
 		System.out.println("-------------------------------");		
 	}
-
-	@Override
-	public void service() {
-		// TODO Auto-generated method stub
-		
-	}
-
 }

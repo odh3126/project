@@ -4,12 +4,12 @@ import ch19_inner_final.board.dao.BoardDAO;
 import ch19_inner_final.board.vo.Board;
 
 public class UpdateBoardUI extends BaseUI {
-	
 	private BoardDAO dao;
+	
 	public UpdateBoardUI(BoardDAO dao) {
 		this.dao = dao;
 	}
-	
+
 	public void service() {
 		int no = getInt("수정할 글번호를 입력하세요 : ");
 		Board board = dao.selectOneBoard(no);

@@ -1,19 +1,17 @@
 package ch19_inner_final.board.ui;
 
-import java.util.Scanner;
-
 import ch19_inner_final.board.dao.BoardDAO;
 import ch19_inner_final.board.vo.Board;
 
-	public class WriteBoardUI extends BaseUI {
+public class WriteBoardUI extends BaseUI {
+
+	private String loginId = "hong";
+	private BoardDAO dao;
+
+	public WriteBoardUI(BoardDAO dao) {
+		this.dao = dao;
+	}
 	
-		// 로그인 사용자 아이디
-		private String loginId = "hong";
-		private BoardDAO dao;
-		public WriteBoardUI(BoardDAO dao) {
-			this.dao = dao;
-		}
-		
 	public void service() {
 		Board b = new Board();
 		b.setTitle(getString("제목을 입력하세요 : "));

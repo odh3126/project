@@ -1,6 +1,5 @@
 package ch19_inner_final.board.util;
 
-
 import java.util.Arrays;
 import java.util.Iterator;
 
@@ -8,6 +7,19 @@ public class ObjectArrayList {
 	Object[] elements = new Object[4];
 	int pos = 0;
 	
+	class MyIterator implements Iterator {
+		int index = 0;
+		public boolean hasNext() {
+			return index < pos;
+		}
+		public Object next() {
+			return elements[index++];
+		}
+	}
+	public Iterator iterator() {
+		return new MyIterator();
+	}
+	/*
 	public Iterator iterator() {
 		return new Iterator() {
 			int index = 0;
@@ -19,10 +31,11 @@ public class ObjectArrayList {
 			}
 		};
 	}
-	
+	*/
 	public boolean isEmpty() {
 		return pos == 0;
 	}
+	
 	public void add(int index, Object data) {
 		if (pos == elements.length) {
 			elements = Arrays.copyOf(elements, pos * 2);
@@ -34,6 +47,7 @@ public class ObjectArrayList {
 		elements[index] = data;
 		pos++;
 	}
+	
 	public void add(Object data) {
 		add(pos, data);
 	}
