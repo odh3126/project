@@ -1,5 +1,7 @@
 package exam.ui;
 
-public class BoardUI {
+import exam.dao.BoardDAO;
 
+public class BoardUI {
+	private BoardDAO dao = new BoardDAO();
 }
