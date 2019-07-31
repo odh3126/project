@@ -4,11 +4,12 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class Browser {
-    private Stack<String> back = new Stack<>();
-    private Stack<String> next = new Stack<>();
+	
+    private Scanner sc = new Scanner(System.in);
     
     private String now = null;//초기화
-    private Scanner sc = new Scanner(System.in);
+	private Stack<String> back = new Stack<>();
+    private Stack<String> next = new Stack<>();
     
     private int menu() {
         System.out.println("--------------------");
@@ -33,7 +34,7 @@ public class Browser {
           
         }
     }
-    
+   
     public void movePage() {
         if(now != null) {
             back.add(now);
@@ -72,9 +73,6 @@ public class Browser {
     }
     
     private void exit() {
-    	sc.close();
-    	System.out.println("브라우져가 종료 되었습니다.");
     	System.exit(0);
     }
 }
-
