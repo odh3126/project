@@ -19,7 +19,7 @@ public class Test10 {
 			fr = new FileReader("data/ch23/test10.txt");
 			while(true) {
 				int ch = fr.read();
-				if (ch == -1) break;
+				if (ch == -1) break; // 읽을 내용이 없을때 멈춘다.
 				
 				System.out.print((char)ch);
 			}

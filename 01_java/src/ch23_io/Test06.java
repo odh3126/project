@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class Test06 {
 	public static void main(String[] args) {
-		File f  = new File("data/ch23/a.txt");
+		File f = new File("data/ch23/a.txt");
 //		System.out.println(f.exists());
 		
 		String name = f.getName(); //a.txt  파일

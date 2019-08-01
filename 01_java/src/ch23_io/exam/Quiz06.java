@@ -33,22 +33,19 @@ import java.io.*;
 
 class Quiz06 {
 	public static void main(String args[]) {
-		File f = new File("data/ch23");
-		System.out.println(f.getPath() + "폴더 하위의 구조");
-		System.out.println("--------------------------");
-		File[] arr = f.listFiles();
-		for (File sub : arr) {
-			if (sub.isDirectory()) {
-				System.out.println(sub.getName());
-				for (File sub1 : arr) {
-					if (sub1.isDirectory()) {
-						System.out.println(sub1.getName());
-						
-					}
-				}continue;
-			}
-			System.out.printf("%s%n", sub.getName());
-		}
-		System.out.println("--------------------------");
+		File f = new File("data");
+		viewDir(f, 0);
   	}
+ 	private static void viewDir(File dirFile, int depth) {
+ 		File[] childs = dirFile.listFiles();
+ 		for(File child : childs) {
+ 			String fName = child.getName();
+ 			System.out.printf(
+ 					"%" + (fName.length() + depth * 4) + "s%n", fName
+ 			);
+ 			if(child.isDirectory()) {
+ 				viewDir(child, depth+1);
+ 			}
+ 		}
+	}
 }

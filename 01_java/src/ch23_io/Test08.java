@@ -68,8 +68,8 @@
  *  Reader
  *  
  *  int read() - char를 읽는다. 읽은 byte에 대한 아스키코드, 읽지 못한 경우 -1을 반환
- *  int read(byte[]) - 실제 읽어드린 배열의 크기, 읽지 못한 경우 -1을 반환
- *  int read(byte[], int, int) - 많이 사용하지는 않음.  배열을  int와 int사이의 크기만큼 읽어드림
+ *  int read(char[]) - 실제 읽어드린 배열의 크기, 읽지 못한 경우 -1을 반환
+ *  int read(char[], int, int) - 많이 사용하지는 않음.  배열을  int와 int사이의 크기만큼 읽어드림
  *  
  *  
  * 
