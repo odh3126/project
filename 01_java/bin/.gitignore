@@ -1,9 +1,10 @@
-/ch01_basic/
 /ChoiceStudentQuiz.class
 /ChoiceTeam.class
 /Exam.class
 /Happy.class
+/Test02.class
 /ch00_algorithm/
+/ch01_basic/
 /ch02_operator/
 /ch03_condition/
 /ch04_repetition/
@@ -28,10 +29,7 @@
 /ch22_collection01/
 /ch22_collection02/
 /ch22_collection03/
+/ch23_io/
+/ch24_totalexam/
 /exam/
 /star/
-/ch23_io/
-/Test02.class
-/Test17.class
-/User.class
-/ch24_totalexam/
