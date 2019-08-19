@@ -1,0 +1,12 @@
+프로젝터에 오라클 드라이버 인식과정
+ - 드라이버 파일 가져오기
+ - :  오라클 사이트 검색 가져오기(jdbc driver로 검색)
+     : 설치된 폴더에서 가져오기
+  : C:\oraclexe\app\oracle\product\11.2.0\server\jdbc\lib\ojdbc6.jar
+  - 프로젝터 하위 lib 폴더 생성 후 드라이버 파일 붙여넣기(프로젝트에서 드라이버 파일 인식 안된 상태임)
+  - 프로젝트에서 드라이버 파일 인식
+  : 프로젝트에서 마우스 오른쪽 버튼 클릭 -> propreties  선택 ->  java build path 선택
+  	-> libraries 탭 선택 -> add jar 선택 ->  경로 선택후 추가 -> apply close 선택
+  	-> referenced Libraries 에 ojdbc6.jar 확인
+   
+ 

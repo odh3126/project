@@ -1,0 +1,54 @@
+
+ create table tb_text(
+    text_no number(5) not null,
+    title varchar2(500) not null,
+    content varchar2(4000) not null,
+    user_id varchar2(16),
+    reg_time date default sysdate not null,
+    read_count number(5) not null,
+    recom_count number(5) not null,
+    constraint text_user_id_pk primary key(user_id)
+);
+
+create table tb_read_recom(
+    text_no number(5) not null,
+    user_id varchar2(16) not null,
+    the_time date default sysdate not null,
+    constraint read_recom_user_id_fk foreign key(user_id) references tb_text(user_id)
+);
+
+comment on column tb_read_recom.text_no is 'ID';
+comment on column tb_read_recom.user_id is '암호';
+comment on column tb_read_recom.the_time is '이메일주소';
+
+drop table tb_user purge;
+
+select * from tb_text;
+
+
+create table tb_user(
+    user_id varchar2(16) not null,
+    password varchar2(16) not null,
+    email varchar2(16),
+    constraint user_user_id_fk foreign key(user_id) references tb_text(user_id)
+);
+
+comment on column tb_user.user_id is 'ID';
+comment on column tb_user.password is '암호';
+comment on column tb_user.email is '이메일주소';
+
+
+
+insert into tb_user(user_id, password, email)
+values('user3', 'abcd1234', '');
+
+select *
+from tb_user;
+
+update tb_user
+   set email = 'user3@noname.com'
+    where user_id = 'user3';
+    
+
+;
+    

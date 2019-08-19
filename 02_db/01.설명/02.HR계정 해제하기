@@ -1,0 +1,25 @@
+1. 콘솔창 열기
+메뉴 > Oracle > Run SQL Command Line 창 열기
+
+2. 사용자(DBA) 로그인 하기
+   - conn 아이디/패스워드
+   - conn system/admin
+
+3. 계정(hr) 해제하고 접속하기
+   - alter(변경시 사용) user [사용자 아이디] identified by [설정패스워드] account unlock;
+   - alter user hr identified by hr account unlock;
+   
+   -conn hr/hr (hr계정으로 이동)
+   
+4. hr 사용자의 기본 제공되는 데이블(데이터) 확인하기 
+   - select * from tab;   (보기 힘듬)
+   
+   - column tname format a20; (한 화면에 출력하게)
+   - select * from tab; (보기 편해짐)
+   
+   
+   
+   
+   
+   
+   

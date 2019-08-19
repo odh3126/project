@@ -1,0 +1,48 @@
+데이터베이스 개념 이해
+
+ : 기존 데이터를 관리하기 위한 방법은?? 파일을 이용
+ : 콤마를 이용한 구분(csv), 엑셀 등을 할용
+ : 파일에 데이터를 저장하는 경우 수정이나 삭제 시 문제가 발생할 수 있다(동시 변경..)
+ 
+ 데이터베이스 : 기능이나 구조를 나타내는 추상적인 개념
+ DBMS(DataBase Managment System)
+ - 기능
+  : CRUD(검색(select)과 갱신(등록(insert), 수정(update), 삭제(delete))
+  : 데이터의 동시성 제어
+  : 장애대응(데이터의 손실에 대한 처리 - 자동 백업 기능, 데이터베이스의 다중화)
+  : 보안
+  : 서버의 역활
+  
+ - 종류
+  : 관계형(RDB : Relational Database, 행(row)과 열(column)을 가지는 표현식 데이터 저장), VO 클래스와 유사..
+  : Nosql(Not Only SQL, MongoDB(빅데이터에서 많이 사용), ..)
+  
+ - 제품
+ : Oracle
+ : MySQL(무료(초기), 유료버전)
+ : MariaDB(무료, Oracle에서 MySQL 라이센스 상태에 불만을 가진 사람들이 만듬..)
+ : Db2(IBM 개발)
+ : MSSQL(윈도우만 가능)
+ : PostgreSQL(무료, 오픈커뮤니티 개발)
+ 
+ - MySQL(웹사이트 구축 - LAMP : Linux, Apache, MySQL, Per1/PHP/Python)
+ 
+ - 클라이언트 : 서버계층
+ : 클라이언트 - 요청
+ 
+ - 클라이언트 툴(서버에 접속 하게 하는 도구)
+ : sqlplus(서버 설치시 자동 제공), Eclipse, SqlDeveloper, Toad, SQLGate, Orange,..
+ 
+ - 데이터베이스 접속을 위한 사용자
+ : system, sys - 관리자(DBA)
+ : hr - 인사관리 유저(연습용), 계정 잠김 상태임(사용을 위해서 계정 잠금 해제 필요)
+ 
+ 
+ 
+ : 서버 - 응답
+ 
+ 
+ 
+ 
+ 
+ 
