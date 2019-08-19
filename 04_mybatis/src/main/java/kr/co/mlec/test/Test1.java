@@ -11,7 +11,7 @@ public class Test1 {
 	private TestMapper1 mapper = new TestMapper1();
 	
 	// 데이터를 조회하기 : 하나의 로우를 반환
-	private void test01() {1
+	private void test01() {
 		/*
 		Member m = mapper.selectMemberInfo1("member-2");
 		if (m != null) {
