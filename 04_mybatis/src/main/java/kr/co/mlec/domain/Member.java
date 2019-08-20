@@ -13,6 +13,14 @@ public class Member {
 	private String [] addrs;
 	private List<String> addrs2;
 	
+	private Account account;
+	
+	public Account getAccount() {
+		return account;
+	}
+	public void setAccount(Account account) {
+		this.account = account;
+	}
 	public String getEmail() {
 		return email;
 	}
@@ -22,6 +30,7 @@ public class Member {
 	public String getId() {
 		return id;
 	}
+	
 	public void setId(String id) {
 		this.id= id;
 	}
@@ -56,4 +65,9 @@ public class Member {
 	public void setAddrs2(List<String> addrs2) {
 		this.addrs2 = addrs2;
 	}
+	@Override
+	public String toString() {
+		return "Member [id=" + id + ", name=" + name + ", account=" + account + "]";
+	}
+
 }
