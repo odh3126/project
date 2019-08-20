@@ -3,13 +3,23 @@ package kr.co.mlec.test;
 import java.util.Arrays;
 import java.util.List;
 
+import org.apache.ibatis.session.SqlSession;
+
 import kr.co.mlec.domain.Member;
 import kr.co.mlec.domain.Search;
-import kr.co.mlec.dao.TestMapper1;
+import kr.co.mlec.common.db.MyAppSqlConfig;
+import kr.co.mlec.dao.TestMapper2;
 
-public class Test1 {
+public class Test2 {
 	
-	private TestMapper1 mapper = new TestMapper1();
+	//인터페이스 이기 때문에 직접 객체 생성 불가능
+	private TestMapper2 mapper;
+	
+	public Test2() {
+		//마이바티스가 실행시 만드는 구현 객체를 얻어오기
+		SqlSession session = MyAppSqlConfig.getSqlSessionInstance();
+		mapper = session.getMapper(TestMapper2.class);
+	}
 	
 	// 데이터를 조회하기 : 하나의 로우를 반환
 	private void test01() {
@@ -144,7 +154,7 @@ public class Test1 {
 	
 	public static void main(String[] args) {
 		try {
-			Test1 t = new Test1();
+			Test2 t = new Test2();
 //			t.test01(); // 결과값이 하나인것 테스트
 //			t.test02(); // 결과값이 여러개인것 테스트
 //			t.insertMember();

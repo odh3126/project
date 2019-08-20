@@ -87,4 +87,58 @@
 		where id = 'member-5'	
 	</delete>
 	
+	<select id="selectMemberIteratorList" parameterType="member" resultMap="memberMap">
+		select *
+			from tb_mybatis_member 
+			<!-- 배열이나 리스트를 활용하기 -->
+			<!-- for (Member m : list) -->
+			where addr in <foreach item="addr" collection="addrs2"
+								   separator="," open="(" close=")">
+							#{addr}
+						  </foreach>
+	</select>
+	
+	<!-- 쿼리의 중복된 부분의 처리 -->
+	<sql id="commonMember">
+			from tb_mybatis_member
+			where addr like '%e%'
+	</sql>
+	<select id="selectMemberIncludeList" resultMap="memberMap">
+		select * 
+			<include refid="commonMember" />
+	</select>
+	<select id="selectMemberIncludeListCount" resultType="int">
+		select count(*)
+			<include refid="commonMember" />
+	</select>
+	
+	<!-- 선택박스 검색 처리 부분 -->	
+	<select id="selectMemberSearchList" parameterType="Search" resultMap="memberMap">
+		select *
+			from tb_mybatis_member
+			<choose>
+				<when test="searchType == 'id'">
+				where id like '%' || #{searchWord} || '%' <!-- 동시에 검색 할수는 없음 -->
+				</when>
+				<when test="searchType == 'name'">
+				where name like '%' || #{searchWord} || '%' 
+				</when>
+				<otherwise>
+					where addr like '%' || #{searchWord} || '%' 
+				</otherwise>
+			</choose>
+	</select>
+	
+	<select id="selectMemberInputList" parameterType="Member" resultMap="memberMap">
+		select *
+			from tb_mybatis_member
+			<where>
+				<if test="id != null">
+				 id like '%' || #{id} || '%'
+				</if>
+				<if test="name != null">
+				and name like '%' || #{name} || '%'
+				</if>
+			</where>
+	</select>
 </mapper>	

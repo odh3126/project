@@ -9,6 +9,11 @@
 	<!-- SQL의 결과를 담을 VO 객체들의 별칭을 설정하여 사용의 편의를 도모  -->
 	<typeAliases>
 		<typeAlias alias="Member" type="kr.co.mlec.domain.Member" />
+		<typeAlias alias="Search" type="kr.co.mlec.domain.Search" />
+		<typeAlias alias="Account" type="kr.co.mlec.domain.Account" />
+		<typeAlias alias="Board" type="kr.co.mlec.domain.Board" />
+		<typeAlias alias="Comment" type="kr.co.mlec.domain.Comment" />
+		<typeAlias alias="File" type="kr.co.mlec.domain.File" />
 	</typeAliases>
 	
 	 
@@ -26,5 +31,7 @@
 
 	<mappers>
 		<mapper resource="config/mapper/test1.xml"/>
+		<mapper resource="config/mapper/test2.xml"/>
+		<mapper resource="config/mapper/test3.xml"/>
 	</mappers>
 </configuration>

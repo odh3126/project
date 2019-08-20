@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 
 import kr.co.mlec.common.db.MyAppSqlConfig;
 import kr.co.mlec.domain.Member;
+import kr.co.mlec.domain.Search;
 
 public class TestMapper1 {
 	private static final String NS = "kr.co.mlec.dao.TestMapper1.";
@@ -60,6 +61,25 @@ public class TestMapper1 {
 	public void deleteMember(String id) {
 		session.delete(NS + "deleteMember", id);
 		
+	}
+	public List<Member> selectMemberIteratorList(Member param) {
+		return session.selectList(NS + "selectMemberIteratorList", param);
+	}
+	
+	public List<Member> selectMemberIncludeList() {
+		return session.selectList(NS + "selectMemberIncludeList");
+	}
+	
+	public int selectMemberIncludeListCount() {
+		return session.selectOne(NS + "selectMemberIncludeListCount");
+	}
+	
+	public List<Member> selectMemberSearchList(Search param) {
+		return session.selectList(NS + "selectMemberSearchList", param);
+	}
+	
+	public List<Member> selectMemberInputList(Member param) {
+		return session.selectList(NS + "selectMemberInputList", param);
 	}
 }
 

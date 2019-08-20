@@ -1,8 +1,8 @@
 package kr.co.mlec.domain;
 
 public class Search {
-	private String searchType;
-	private String searchWord;
+	private String searchType; // 아이디, 이름, 지역, 주소
+	private String searchWord; // 입력한 검색어, 홍길동
 	
 	public String getSearchType() {
 		return searchType;
