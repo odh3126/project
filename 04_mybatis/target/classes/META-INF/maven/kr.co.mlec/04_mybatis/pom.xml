@@ -7,7 +7,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>04_mybatis</name>
 	<description>04_mybatis</description>
-
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
 		<dependency>
@@ -15,7 +14,7 @@
 			<artifactId>mybatis</artifactId>
 			<version>3.5.2</version>
 		</dependency>
-		
+
 		<!-- oracle jdbc -->
 		<dependency>
 			<groupId>com.oracle</groupId>
@@ -37,8 +36,5 @@
 			</plugin>
 		</plugins>
 	</build>
+
 </project>
-
-
-
-
